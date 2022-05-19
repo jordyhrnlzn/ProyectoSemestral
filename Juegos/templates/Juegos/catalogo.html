@@ -14,26 +14,26 @@
 
 <body class="is-preload">
 
-	<!-- Page Wrapper -->
-	<div id="page-wrapper">
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
 
-		<!-- Header -->
-		<header id="header">
-			<h1><a href="index.html">LibreryGame</a></h1>
-			<nav>
-				<a href="#menu">Menu</a>
-			</nav>
-		</header>
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="{% url 'index' %}">LibreryGame</a></h1>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
 
 		<!-- Menu -->
 		<nav id="menu">
 			<div class="inner">
 				<h2>Menu</h2>
 				<ul class="links">
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="catalogo.html">Catalogo</a></li>
-					<li><a href="inciarsesion.html">Iniciar sesión</a></li>
-					<li><a href="crearcuenta.html">Crear cuenta</a></li>
+					<li><a href="{% url 'index' %}">Inicio</a></li>
+					<li><a href="{% url 'catalogo' %}">Catalogo</a></li>
+					<li><a href="{% url 'inciarsesion' %}">Iniciar sesión</a></li>
+					<li><a href="{% url 'crearcuenta' %}">Crear cuenta</a></li>
 				</ul>
 				<a href="#" class="close">Close</a>
 			</div>

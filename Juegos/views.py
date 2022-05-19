@@ -6,3 +6,12 @@ def index(request):
 
 def catalogo(request):
     return render(request,'Juegos/catalogo.html')
+
+def inciarsesion(request):
+    return render(request,'Juegos/inciarsesion.html')
+
+def crearcuenta(request):
+    return render(request,'Juegos/crearcuenta.html')
+
+def inciarsesionADMIN(request):
+    return render(request,'Juegos/inciarsesionADMIN.html')
