@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>LibreryGame</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{% static 'Juegos/css/main.css' %}" />
+	<noscript>
+		<link rel="stylesheet" href="{% static 'Juegos/css/noscript.css' %}" />
+        <link rel="stylesheet" href="{% static 'Juegos/css/perfil.css' %}" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+				</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>Menu</h2>
+				<ul class="links">
+					<li><a href="{% url 'index' %}">Inicio</a></li>
+					<li><a href="{% url 'catalogo' %}">Catalogo</a></li>
+					<li><a href="{% url 'inciarsesion' %}">Iniciar sesión</a></li>
+					<li><a href="{% url 'crearcuenta' %}">Crear cuenta</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="container"> <div class="card"> <div class="info"> <span>Editar perfil</span> <button id="savebutton">Editar</button> </div> <div class="forms"> <div class="inputs"> <span>Primer nombre</span> <input type="text" readonly value="John"> </div> <div class="inputs"> <span>Apellido</span> <input type="text" readonly value="Doe"> </div> <div class="inputs"> <span>Email</span> <input type="text" readonly value="john.doe12@gmail.com"> </div> <div class="inputs"> <span>Nombre de Usuario</span> <input type="text" readonly value="johndoe12"> </div> <div class="inputs"> <span>Pais</span> <input type="text" readonly value="United States"> </div> </div> </div>
+    </div>
+
+    		<!-- Scripts -->
+		<script src="{% static 'Juegos/js/perfil.js' %}"></script>
+		<script src="{% static 'Juegos/js/jquery.min.js' %}"></script>
+		<script src="{% static 'Juegos/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'Juegos/js/browser.min.js' %}"></script>
+		<script src="{% static 'Juegos/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'Juegos/js/util.js' %}"></script>
+		<script src="{% static 'Juegos/js/main.js' %}"></script>
+        
+</body>
+</html>

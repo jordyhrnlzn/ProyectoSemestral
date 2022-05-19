@@ -15,3 +15,12 @@ def crearcuenta(request):
 
 def inciarsesionADMIN(request):
     return render(request,'Juegos/inciarsesionADMIN.html')
+
+def editarperfil(request):
+    return render(request,'Juegos/editarperfil.html')
+
+def index2(request):
+    return render(request,'Juegos/index2.html')
+
+def catalogo2(request):
+    return render(request,'Juegos/catalogo2.html')

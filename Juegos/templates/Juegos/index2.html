@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>LibreryGame</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="{% static 'Juegos/css/main.css' %}" />
+	<noscript>
+		<link rel="stylesheet" href="{% static 'Juegos/css/noscript.css' %}" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<h1><a href="{% url 'index2' %}">LibreryGame</a></h1>
+					<nav>
+						<a href="#menu">ADMINISTRADOR</a>
+					</nav>
+				</header>
+
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner">
+				<h2>ADMINISTRADOR</h2>
+				<ul class="links">
+					<li><a href="{% url 'catalogo2' %}">Catalogo</a></li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+				<h2>¡Bienvenido a tu libreria de juegos!</h2>
+			</div>
+		</section>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+
+			<!-- One -->
+			<section id="one" class="wrapper spotlight style1">
+				<div class="inner">
+					<a href="#" class="image"><img src="{% static 'Juegos/img/pic01.jpg' %}" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Sobre nosotros</h2>
+						<p>Nuestra pagina web cuenta con la más reciente información sobre los videjuegos que amas, su
+							precio actual en dolares, su fecha de lanzamiento,
+							su clasificación, requisitos minimos, ETC.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Two -->
+			<section id="two" class="wrapper alt spotlight style2">
+				<div class="inner">
+					<a href="#" class="image"><img src="{% static 'Juegos/img/pic02.jpg' %}" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Nuestra variedad</h2>
+						<p>La variedad de videojuegos y plataformas en nuestra pagina es inmensa. Podrás encontrar
+							juegos clásicos con sus respectivas plataformas o inclusive si no cuenta con una.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Three -->
+			<section id="three" class="wrapper spotlight style3">
+				<div class="inner">
+					<a href="#" class="image"><img src="{% static 'Juegos/img/pic03.jpg' %}" alt="" /></a>
+					<div class="content">
+						<h2 class="major">Reseñas</h2>
+						<p>La página es 100% sincerda contigo, las reseñas son de la propia comunidad de los videojuegos
+							o plataformas. Podras basarte en todo el fandom para convencerte de comprar un videojuego o
+							si no vale la pena.</p>
+					</div>
+				</div>
+			</section>
+
+
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="inner">
+					<ul class="contact">
+						<li>
+							Region metropolitana de Santiago<br />
+							Nueva 1660, Huechuraba<br />
+						</li>
+						<li>(52) 123-9876</li>
+						<li><a href="#">librerygame@gmail.com</a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; LibrerayGames. Todos los derechos reservados.</li></a>
+					</ul>
+				</div>
+			</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="{% static 'Juegos/js/jquery.min.js' %}"></script>
+	<script src="{% static 'Juegos/js/jquery.scrollex.min.js' %}"></script>
+	<script src="{% static 'Juegos/js/browser.min.js' %}"></script>
+	<script src="{% static 'Juegos/js/breakpoints.min.js' %}"></script>
+	<script src="{% static 'Juegos/js/util.js' %}"></script>
+	<script src="{% static 'Juegos/js/main.js' %}"></script>
+
+</body>
+
+</html>
