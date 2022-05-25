@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.models import Videojuego, Categoria
+from .models import Videojuego, Categoria
 
 
 # Create your views here.
@@ -30,7 +30,7 @@ def catalogo2(request):
 def listado(request):
     videojuegos = Videojuego.objects.all()
     contexto = {"lista_v": videojuegos}
-    return render(request,'Juegos/listado.html',contexto)
+    return render(request,'Juegos/listadoM.html',contexto)
 
 def formulario(request):
     categorias = Categoria.objects.all()
@@ -43,6 +43,6 @@ def registrar(request):
     imagen2 = request.FILES[imagen1]
     categoria2 = request.POST[categoria1]
 
-categoria3 = Categoria.objects.get(IdCategoria = categoria2)
-Videojuego.objects.create(nombreVideojuego = nombre2, AñoLanzamiento = año2, imagen = imagen2, categoria = categoria2)
-return redirect('formulario')
+    categoria3 = Categoria.objects.get(IdCategoria = categoria2)
+    Videojuego.objects.create(nombreVideojuego = nombre2, AñoLanzamiento = año2, imagen = imagen2, categoria = categoria2)
+    return redirect('formulario')

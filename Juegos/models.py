@@ -13,7 +13,7 @@ class Videojuego(models.Model):
     nombreVideojuego = models.CharField(max_length=20, verbose_name='Nombre del videojuego', blank=False, null=False)
     AñoLanzamiento = models.IntegerField(verbose_name='Año de salida del videojuego')
     imagen = models.ImageField(upload_to='videojuegos')
-    categoria = models.ForeignKey(Categoria,on_delete= models.CASCADE)
+    categoria = models.ForeignKey(Categoria,on_delete= models.CASCADE, null=True,blank=True)
 
     def __str__(self):
         return self.nombreVideojuego
