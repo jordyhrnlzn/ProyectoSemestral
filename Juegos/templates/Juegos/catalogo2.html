@@ -7,75 +7,353 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="{% static 'Juegos/css/main.css' %}" />
+	<link rel="stylesheet" href="{% static 'Juegos/css/styles.css' %}" />
 	<noscript>
 		<link rel="stylesheet" href="{% static 'Juegos/css/noscript.css' %}" />
 	</noscript>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 </head>
 
 <body class="is-preload">
 
-		<!-- Page Wrapper -->
-		<div id="page-wrapper">
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
 
 			<!-- Header -->
-				<header id="header">
-					<h1><a href="{% url 'index2' %}">LibreryGame</a></h1>
-					<nav>
-						<a href="#menu">Menu</a>
-					</nav>
-				</header>
-
-		<!-- Menu -->
-		<nav id="menu">
-			<div class="inner">
-				<h2>Menu</h2>
-				<ul class="links">
-					<li><a href="{% url 'index2' %}">Inicio</a></li>
-					<li><a href="{% url 'catalogo2' %}">Catalogo</a></li>
-				</ul>
-				<a href="#" class="close">Close</a>
-			</div>
-		</nav>
-
-		<!-- Cabezera -->
-		<section id="wrapper">
-			<header>
-				<div class="inner">
-					<h2>Catalogo</h2>
-					<p>Aquí podrás encontrar todo nuestro catalogo de videojuegos.</p>
-				</div>
+			<header id="header">
+				<h1><a href="{% url 'index2' %}">LibreryGame</a></h1>
+				<nav>
+					<a href="#menu">ADMINISTRADOR</a>
+				</nav>
 			</header>
 
-			<div class="container">
-				<div class="item" id="item1">
-					<a href="Dead by Daylight.html">
-						<img src="{% static 'Juegos/img/dead-by-daylight-cover-9rs.jpg' %}" alt="imagen juego" class='imgRedonda' alt="ahh"
-							width="200"></td>
-						<p class='Fuentetitsombra'>Dead by Daylight</p>
-					</a><br>
-				</div>
-				<div class="item" id="item2">
-					<a href="Elden Ring Deluxe.html">
-						<img src="{% static 'Juegos/img/elden-ring-deluxe-edition-cover-vl4.jpg' %}" lt="imagen juego" class='imgRedonda'
-							alt="ahh" width="200"></td>
-						<p class='Fuentetitsombra'>Elden Ring Deluxe</p>
-					</a><br>
-				</div>
-				<div class="item" id="item3">
-					<a href="World War Z GOTY.html">
-						<img src="{% static 'Juegos/img/world-war-z-goty-cover-uq6.jpg' %}" lt="imagen juego" class='imgRedonda' alt="ahh"
-							width="200"></td>
-						<p class='Fuentetitsombra'>World War Z GOTY</p>
-					</a><br>
-				</div>
+	<!-- Menu -->
+	<nav id="menu">
+		<div class="inner">
+			<h2>ADMINISTRADOR</h2>
+			<ul class="links">
+				<li><a href="{% url 'catalogo2' %}">Catalogo</a></li>
+				<li><a href="{% url 'listado' %}">Ir al listado</a></li>
+			</ul>
+			<a href="#" class="close">Close</a>
+		</div>
+	</nav>
 
-				<!-- Scripts -->
-				<script src="{% static 'Juegos/js/jquery.min.js' %}"></script>
-				<script src="{% static 'Juegos/js/jquery.scrollex.min.js' %}"></script>
-				<script src="{% static 'Juegos/js/browser.min.js' %}"></script>
-				<script src="{% static 'Juegos/js/breakpoints.min.js' %}"></script>
-				<script src="{% static 'Juegos/js/util.js' %}"></script>
-				<script src="{% static 'Juegos/js/main.js' %}"></script>
+		<!-- Cabezera -->
+
+		<section class="page-section portfolio" id="portfolio">
+			<div class="container">
+				<!-- Portfolio Section Heading-->
+				<center>
+					<h1>Catalogo</h1>
+				</center>
+				<!-- Icon Divider-->
+				<div class="divider-custom">
+					<div class="divider-custom-line"></div>
+					<div class="divider-custom-line"></div>
+				</div>
+				<!-- Portfolio Grid Items-->
+				<div class="row justify-content-center">
+					<!-- Portfolio Item 1-->
+					<div class="col-md-6 col-lg-4 mb-5">
+						<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><i
+										class="fas fa-plus fa-3x"></i></div>
+							</div>
+							<img class="img-fluid" src="{% static 'Juegos/img/dead-by-daylight-cover-9rs.jpg' %}"
+								alt="..." />
+						</div>
+					</div>
+					<!-- Portfolio Item 2-->
+					<div class="col-md-6 col-lg-4 mb-5">
+						<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><i
+										class="fas fa-plus fa-3x"></i></div>
+							</div>
+							<img class="img-fluid"
+								src="{% static 'Juegos/img/elden-ring-deluxe-edition-cover-vl4.jpg' %}" alt="..." />
+						</div>
+					</div>
+					<!-- Portfolio Item 3-->
+					<div class="col-md-6 col-lg-4 mb-5">
+						<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+							<div
+								class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><i
+										class="fas fa-plus fa-3x"></i></div>
+							</div>
+							<img class="img-fluid" src="{% static 'Juegos/img/world-war-z-goty-cover-uq6.jpg' %}"
+								alt="..." />
+						</div>
+					</div>
+
+					<!-- Portfolio Modals-->
+					<!-- Portfolio Modal 1-->
+					<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1"
+						aria-labelledby="portfolioModal1" aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="modal-header border-0"><button class="btn-close" type="button"
+										data-bs-dismiss="modal" aria-label="Close"></button></div>
+								<div class="modal-body text-center pb-5">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="col-lg-8">
+												<!-- Portfolio Modal - Title-->
+												<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+													Dead by Daylight</h2>
+												<!-- Icon Divider-->
+												<div class="divider-custom">
+													<div class="divider-custom-line"></div>
+													<div class="divider-custom-icon"><i class="fas fa-star"></i>
+													</div>
+													<div class="divider-custom-line"></div>
+												</div>
+												<!-- Portfolio Modal - Image-->
+												<img class="img-fluid rounded mb-5"
+													src="{% static 'Juegos/img/dead-by-daylight-cover-9rs.jpg' %}"
+													alt="..." />
+												<!-- Portfolio Modal - Text-->
+
+												<h1>Descripción del Juego</h1>
+												<p class='Fuentetitsombra'>Dead by Daylight mezcla en una misma
+													propuesta la acción multijugador con el
+													survival horror. ¿El resultado? Un chalado asesino buscará dar caza
+													sin demora a cuatro
+													supervivientes a través de un mundo de pesadilla, generado de forma
+													procesal, similar al juego del
+													ratón y el gato. Los perseguidos serán ágiles, jugarán en tercera
+													persona y podrán ir en equipo, y
+													cooperar, o hacer frente a la amenaza en solitario. Mientras el
+													psicópata homicida, en primera
+													persona, podrá dominar poderes únicos de los típicos personajes del
+													género de terror y slashers con
+													mayor potencia y velocidad.
+
+												<h1>Requisitos de Sistema</h1>
+
+												<h3>Minimos</h3>
+												<p class='Fuentetitsombra'>Sistema operativo: 64-bit (Windows 7, Windows
+													8<br> & Windows 8.1)<br>
+													Procesador: Intel Core i3 4170 o AMD FX-8120<br>
+													Memoria: 8 GB de RAM<br>
+													Gráficos: DX11 Compatible GeForce GTX 460 1GB o AMD HD 6850 1GB<br>
+													DirectX: Versión 11<br>
+													Almacenamiento: 15 GB de espacio disponible<br>
+													Tarjeta de sonido: DX11 compatible<br>
+												<h3>Recomendados</h3>
+												<p class='Fuentetitsombra'>Sistema operativo: 64-bit Windows 7, Windows
+													8 & Windows 8.1<br>
+													Procesador: Intel Core i5 4170 o AMD FX-8300 o higher<br>
+													Memoria: 8 GB de RAM<br>
+													Gráficos: DX11 Compatible GeForce con 2GB o RAM o AMD HD 7800 o
+													higher<br>
+													Almacenamiento: 15 GB de espacio disponible<br>
+													Tarjeta de sonido: DX11 compatible<br>
+
+
+												<div class="rate">
+													<input type="radio" id="star5" name="rate" value="5" />
+													<label for="star5" title="text">1 estrella</label>
+													<input type="radio" id="star4" name="rate" value="4" />
+													<label for="star4" title="text">2 estrellas</label>
+													<input type="radio" id="star3" name="rate" value="3" />
+													<label for="star3" title="text">3 estrellas</label>
+													<input type="radio" id="star2" name="rate" value="2" />
+													<label for="star2" title="text">4 estrellas</label>
+													<input type="radio" id="star1" name="rate" value="1" />
+													<label for="star1" title="text">5 estrellas</label>
+												</div>
+												<button class="btn btn-primary" data-bs-dismiss="modal">
+													<i class="fas fa-xmark fa-fw"></i>
+													Cerrar Ventana
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Portfolio Modal 2-->
+					<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1"
+						aria-labelledby="portfolioModal2" aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="modal-header border-0"><button class="btn-close" type="button"
+										data-bs-dismiss="modal" aria-label="Close"></button></div>
+								<div class="modal-body text-center pb-5">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="col-lg-8">
+												<!-- Portfolio Modal - Title-->
+												<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+													Elden Ring Deluxe Edition</h2>
+												<!-- Icon Divider-->
+												<div class="divider-custom">
+													<div class="divider-custom-line"></div>
+													<div class="divider-custom-icon"><i class="fas fa-star"></i>
+													</div>
+													<div class="divider-custom-line"></div>
+												</div>
+												<!-- Portfolio Modal - Image-->
+												<img class="img-fluid rounded mb-5"
+													src="{% static 'Juegos/img/elden-ring-deluxe-edition-cover-vl4.jpg' %}"
+													alt="..." />
+												<!-- Portfolio Modal - Text-->
+												<h1>Descripción del Juego</h1>
+												<p class='Fuentetitsombra'>EL NUEVO JUEGO DE ROL Y ACCIÓN DE
+													AMBIENTACIÓN FANTÁSTICA.
+													Álzate, Sinluz, y que la gracia te guíe para abrazar el poder del
+													Círculo de Elden y encumbrarte como señor del Círculo en las Tierras
+													Intermedias.
+
+													• Un extenso mundo lleno de emociones
+													Un vasto mundo perfectamente conectado en el que los territorios
+													abiertos estarán repletos de situaciones y mazmorras enormes con
+													diseños complejos y tridimensionales. Mientras exploras,
+													experimentarás el deleite de descubrir amenazas desconocidas y
+													sobrecogedoras, y eso te haré sentir la emoción de la
+													superación.
+
+												<h1>Requisitos de Sistema</h1>
+
+												<h3>Minimos</h3>
+												<p class='Fuentetitsombra'>SO: Windows 10<br>
+													Procesador: INTEL CORE I5-8400 or AMD RYZEN 3 3300X<br>
+													Memoria: 12 GB de RAM<br>
+													Gráficos: NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB<br>
+													DirectX: Versión 12<br>
+													Almacenamiento: 60 GB de espacio disponible<br>
+												<h3>Recomendados</h3>
+												<p class='Fuentetitsombra'>SO: Windows 10/11<br>
+													Procesador: INTEL CORE I7-8700K or AMD RYZEN 5 3600X<br>
+													Memoria: 16 GB de RAM<br>
+													Gráficos: NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8
+													GB<br>
+													DirectX: Versión 12<br>
+													Almacenamiento: 60 GB de espacio disponible<br>
+													Tarjeta de sonido: Windows Compatible Audio Device<br>
+
+
+													<div class="rate">
+														<input type="radio" id="star5" name="rate" value="5" />
+														<label for="star5" title="text">1 estrella</label>
+														<input type="radio" id="star4" name="rate" value="4" />
+														<label for="star4" title="text">2 estrellas</label>
+														<input type="radio" id="star3" name="rate" value="3" />
+														<label for="star3" title="text">3 estrellas</label>
+														<input type="radio" id="star2" name="rate" value="2" />
+														<label for="star2" title="text">4 estrellas</label>
+														<input type="radio" id="star1" name="rate" value="1" />
+														<label for="star1" title="text">5 estrellas</label>
+													</div>
+													<button class="btn btn-primary" data-bs-dismiss="modal">
+														<i class="fas fa-xmark fa-fw"></i>
+														Cerrar Ventana
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Portfolio Modal 3-->
+					<div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1"
+						aria-labelledby="portfolioModal3" aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="modal-header border-0"><button class="btn-close" type="button"
+										data-bs-dismiss="modal" aria-label="Close"></button></div>
+								<div class="modal-body text-center pb-5">
+									<div class="container">
+										<div class="row justify-content-center">
+											<div class="col-lg-8">
+												<!-- Portfolio Modal - Title-->
+												<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+													World War Z Goty</h2>
+												<!-- Icon Divider-->
+												<div class="divider-custom">
+													<div class="divider-custom-line"></div>
+													<div class="divider-custom-icon"><i class="fas fa-star"></i>
+													</div>
+													<div class="divider-custom-line"></div>
+												</div>
+												<!-- Portfolio Modal - Image-->
+												<img class="img-fluid rounded mb-5"
+													src="{% static 'Juegos/img/world-war-z-goty-cover-uq6.jpg' %}"
+													alt="..." />
+												<!-- Portfolio Modal - Text-->
+
+												<h1>Descripción del Juego</h1>
+												<p class='Fuentetitsombra'>Guerra mundial Z es un emocionante juego de
+													disparos cooperativo (cuatro jugadores) en tercera persona, con
+													hordas masivas de zombis que devoran sin piedad a sus presas
+													vivas.
+
+													Se centra en un estilo de juego rápido y está inspirado en la
+													increíblemente famosa película de Paramount Pictures del mismo
+													nombre, Guerra mundial Z. El juego explora nuevas tramas y
+													personajes del mundo en misiones tensas, intensas y
+													horripilantemente fascinantes creadas especialmente para PC
+													modernos.
+
+												<h1>Requisitos de Sistema</h1>
+
+												<h3>Minimos</h3>
+												<p class='Fuentetitsombra'>CPU: Core i3-3220 / AMD A10-5700<br>
+													RAM: 8 GB<br>
+													Sistema Operativo: Windows 7 y posterior<br>
+													Tarjeta de vídeo: GF650Ti / Intel 630 / Radeon HD 5870<br>
+													Almacenamiento: 35 GB<br>
+												<h3>Recomendados</h3>
+												<p class='Fuentetitsombra'>CPU: Intel Core i7-3970 @ 3,50 GHz<br>
+													RAM: 16 GB<br>
+													Sistema Operativo: Windows 10 de 64 bits, DX11<br>
+													Tarjeta de vídeo: GeForce GTX 960 / Radeon R9 280<br>
+													Almacenamiento: 35 GB<br>
+
+													<div class="rate">
+														<input type="radio" id="star5" name="rate" value="5" />
+														<label for="star5" title="text">1 estrella</label>
+														<input type="radio" id="star4" name="rate" value="4" />
+														<label for="star4" title="text">2 estrellas</label>
+														<input type="radio" id="star3" name="rate" value="3" />
+														<label for="star3" title="text">3 estrellas</label>
+														<input type="radio" id="star2" name="rate" value="2" />
+														<label for="star2" title="text">4 estrellas</label>
+														<input type="radio" id="star1" name="rate" value="1" />
+														<label for="star1" title="text">5 estrellas</label>
+													</div>
+													<button class="btn btn-primary" data-bs-dismiss="modal">
+														<i class="fas fa-xmark fa-fw"></i>
+														Cerrar Ventana
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Scripts -->
+					<script src="{% static 'Juegos/js/jquery.min.js' %}"></script>
+					<script src="{% static 'Juegos/js/jquery.scrollex.min.js' %}"></script>
+					<script src="{% static 'Juegos/js/browser.min.js' %}"></script>
+					<script src="{% static 'Juegos/js/breakpoints.min.js' %}"></script>
+					<script src="{% static 'Juegos/js/util.js' %}"></script>
+					<script src="{% static 'Juegos/js/main.js' %}"></script>
 </body>
 
 
