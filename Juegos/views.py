@@ -27,6 +27,9 @@ def index2(request):
 def catalogo2(request):
     return render(request,'Juegos/catalogo2.html')
 
+def administrar(request):
+    return render(request,'Juegos/administrar.html')
+
 def listado(request):
     videojuegos = Videojuego.objects.all()
     contexto = {"lista_v": videojuegos}

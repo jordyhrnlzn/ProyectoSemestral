@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'Juegos/css/administrar.css' %}">
+    <link rel="stylesheet" href="{% static 'Juegos/css/main.css' %}" />>
+    <script src="https://kit.fontawesome.com/1c336a9b3f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <body class="is-preload">
+
+        <!-- Page Wrapper -->
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <header id="header">
+                <h1><a href="{% url 'index' %}">LibreryGame</a></h1>
+                <nav>
+                    <a href="#menu">Menu</a>
+                </nav>
+            </header>
+
+            <!-- Menu -->
+            <nav id="menu">
+                <div class="inner">
+                    <h2>ADMINISTRADOR</h2>
+                    <ul class="links">
+                        <li><a href="{% url 'catalogo2' %}">Catalogo</a></li>
+                        <li><a href="{% url 'administrar' %}">Administrar Usuarios</a></li>
+                        <li><a href="{% url 'listado' %}">Ir al listado</a></li>
+                    </ul>
+                    <a href="#" class="close">Close</a>
+                </div>
+            </nav><br><br><br>
+            <main>
+                <section id="formContainer">
+                    <h1>USUARIOS</h1>
+                    <form>
+                        <label for="inNickName">NickName</label>
+                        <input type="text" id="inNickname" placeholder="A YPZ">
+                        <label for="inEmail">Correo electronico</label>
+                        <input type="email" id="inEmail" placeholder="example@example.com">
+                        <label for="inPassword">Password</label>
+                        <input type="password" id="inPassword">
+                        <button type="submit" id="btnAddUpdate">Guardar</button>
+                    </form>
+                </section>
+                <section id="tableContainer">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th>Nickname</th>
+                                <th>Correo</th>
+                                <th>Contraseña</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+            <!-- Scripts -->
+            <script src="{% static 'Juegos/js/User.js' %}"></script>
+            <script src="{% static 'Juegos/js/administrar.js' %}"></script>
+            <script src="{% static 'Juegos/js/controller/user.js' %}"></script>
+            <script src="{% static 'Juegos/js/jquery.min.js' %}"></script>
+            <script src="{% static 'Juegos/js/jquery.scrollex.min.js' %}"></script>
+            <script src="{% static 'Juegos/js/browser.min.js' %}"></script>
+            <script src="{% static 'Juegos/js/breakpoints.min.js' %}"></script>
+            <script src="{% static 'Juegos/js/util.js' %}"></script>
+            <script src="{% static 'Juegos/js/main.js' %}"></script>
+    </body>
+
+</html>

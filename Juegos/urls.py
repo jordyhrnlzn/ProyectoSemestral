@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from. views import index,catalogo,crearcuenta,inciarsesion,inciarsesionADMIN,editarperfil,index2,catalogo2,listado,formulario,registrar
+from. views import index,catalogo,crearcuenta,inciarsesion,inciarsesionADMIN,editarperfil,index2,catalogo2,listado,formulario,registrar,administrar
 
 urlpatterns = [
     path('',index,name='index'),
@@ -14,4 +14,5 @@ urlpatterns = [
     path('listado/',listado,name='listado'),
     path('formulario/',formulario,name='formulario'),
     path('registrar/',registrar,name='registrar'),
+    path('administrar/',administrar,name='administrar'),
 ]
