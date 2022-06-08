@@ -12,6 +12,9 @@ def catalogo(request):
 def inciarsesion(request):
     return render(request,'Juegos/inciarsesion.html')
 
+def administrarjuego(request):
+    return render(request,'Juegos/administrarjuego.html')
+
 def crearcuenta(request):
     return render(request,'Juegos/crearcuenta.html')
 
