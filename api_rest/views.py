@@ -1,15 +1,18 @@
 from django.shortcuts import render
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
 from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from Juegos.models import Videojuego
 from .serializers import VideojuegoSerializers
+from rest_framework.authentication import TokenAuthentication
+from rest_framework.permissions import IsAuthenticated
 # Create your views here.
 
 @csrf_exempt
 @api_view(['GET','POST'])
+@permission_classes((IsAuthenticated,))
 def listado_videojuegos(request):
     if request.method == 'GET':
         videojuegos = Videojuego.objects.all()
@@ -26,6 +29,7 @@ def listado_videojuegos(request):
             return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
 
 @api_view(['POST'])
+@permission_classes((IsAuthenticated,))
 def addVideojuego(request):
     data = JSONParser().parse(request)
     serializer = VideojuegoSerializers(data = data)
@@ -36,6 +40,7 @@ def addVideojuego(request):
         return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET','PUT','DELETE'])
+@permission_classes((IsAuthenticated,))
 def modEliminarVideojuego(request, codigo):
     try:
         v = Videojuego.objects.get(IdJuego = codigo)
@@ -58,21 +63,3 @@ def modEliminarVideojuego(request, codigo):
     elif request.method == 'DELETE':
         v.delete()
         return Response(status = status.HTTP_204_NO_CONTENT)
-
-    
-def login_app(request):
-    us = request.POST['username']
-    cl = request.POST['pass']
-    try:
-        x = Usuario.objects.get(nombreUsuario = us, clave = cl)
-        rol2 = Rol.objects.get(nombreRol = 'Administrador')
-
-        if x.rol == rol2:
-            contexto ={"usuario": x}
-            return render(request, 'x/admin.html',contexto)
-        else:
-            contexto ={"usuario": x}
-            return render(request, 'x/user.html',contexto)
-    except Usuario.DoesNotExist:
-        messages.error(request, 'Usuario y(o clave incorrecta')
-        return redirect('login')

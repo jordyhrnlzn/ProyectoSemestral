@@ -1,8 +1,10 @@
 from django.urls import path
 from api_rest.views import listado_videojuegos, addVideojuego, modEliminarVideojuego
+from api_rest.viewsLogin import ini_user
 
 urlpatterns = [
     path('listado_videojuegos/',listado_videojuegos,name='listado_videojuegos'),
     path('addVideojuego/',addVideojuego,name='addVideojuego'),
-    path('modEliminarVideojuego/',modEliminarVideojuego,name='modEliminarVideojuego'),
+    path('modEliminarVideojuego/<codigo>',modEliminarVideojuego,name='modEliminarVideojuego'),
+    path('ini_user/',ini_user,name="ini_user"),
 ]
