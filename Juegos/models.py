@@ -8,6 +8,21 @@ class Categoria(models.Model):
     def __str__(self):
         return self.nombreCategoria
 
+class Usuarios(models.Model):
+    IdUsuarios = models.AutoField(primary_key=True, verbose_name='ID autoincrementable de los usuarios')
+    nombreUsuario = models.CharField(max_length=20, verbose_name='Nombre de los usuarios', blank=False, null=False)
+
+    def __str__(self):
+        return self.nombreUsuarios
+    
+class Usuarios2(models.Model):
+    IdUsuarios = models.AutoField(primary_key=True, verbose_name='ID autoincrementable de los usuarios')
+    nombreUsuario = models.CharField(max_length=20, verbose_name='Nombre de los usuarios', blank=False, null=False)
+
+    def __str__(self):
+        return self.nombreUsuarios
+
+
 class Videojuego(models.Model):
     IdJuego = models.AutoField(primary_key=True, verbose_name='ID autoincrementable del juego')
     nombreVideojuego = models.CharField(max_length=20, verbose_name='Nombre del videojuego', blank=False, null=False)
