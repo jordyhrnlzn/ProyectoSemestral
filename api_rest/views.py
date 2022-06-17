@@ -6,6 +6,7 @@ from rest_framework.parsers import JSONParser
 from django.views.decorators.csrf import csrf_exempt
 from Juegos.models import Videojuego
 from .serializers import VideojuegoSerializers
+from .serializers import VideojuegoSerializers2
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 # Create your views here.
