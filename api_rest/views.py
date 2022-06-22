@@ -59,7 +59,7 @@ def modEliminarVideojuego(request, codigo):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        data2 == JSONParser().parse(request)
+        data2 = JSONParser().parse(request)
         serializer = VideojuegoSerializers2(v, data = data2)
         if serializer.is_valid():
             serializer.save()
@@ -112,7 +112,7 @@ def modEliminarUsuarios(request, codigo):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        data2 == JSONParser().parse(request)
+        data2 = JSONParser().parse(request)
         serializer = UsuariosSerializers2(usuarios, data = data2)
         if serializer.is_valid():
             serializer.save()
@@ -165,7 +165,7 @@ def modEliminarCategoria(request, codigo):
         return Response(serializer.data)
 
     elif request.method == 'PUT':
-        data2 == JSONParser().parse(request)
+        data2 = JSONParser().parse(request)
         serializer = CategoriaSerializers2(categoria, data = data2)
         if serializer.is_valid():
             serializer.save()
